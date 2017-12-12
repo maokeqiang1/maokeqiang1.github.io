@@ -26,6 +26,26 @@ body {
     font-size: 18px;
     background: #fff;
 }
+/*自定义音乐*/
+
+.mp3img{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.18);
+    border: 3px solid rgba(0, 0, 0, 0.16);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3.5;
+    animation: mp3 2s infinite linear;
+}
+@keyframes mp3{
+    0%{transform:rotateZ(0deg)}
+    100%{transform:rotateZ(360deg)}
+}
 
 /*-自定义样式开始-*/
 
@@ -39,7 +59,7 @@ body {
 }
 
 /*s1部分*/
-.s1 ,.s2{
+.s1 ,.s2,.s3{
     background: url("../img/bj.png");
     height: 100%;
 }
@@ -65,7 +85,9 @@ body {
     left: 35px;
     bottom: 170px;
 }
-
+.swing{
+    transform-origin:center;
+}
 .s1 .header img:nth-of-type(4) {
     width: 60px;
     right: 50px;
@@ -77,13 +99,16 @@ body {
     width: 70%;
     top: 25%;
     margin-left: -35%;
+    animation: pulse infinite;
 }
 
 .s1 .text {
     position: absolute;
-    top: 35%;
+    top: 30%;
 }
-
+.s1 .text .img9{
+    margin-top: 20px;
+}
 .s1 .text img:nth-of-type(1) {
     width: 40%;
 }
@@ -109,7 +134,6 @@ body {
 .s1 .footer img {
     width: 130%;
 }
-
 .s1 .footer img:nth-of-type(1) {
     left: 0;
 }
@@ -125,19 +149,42 @@ body {
 .s1 .footer p{
     margin-bottom: 40px;
 }
+
+
 /*s2部分*/
 .s2 {
-    color: red;
+    color: aqua;;
 }
-.s2 h2{
-    color: aqua;
+.s2 h2,.s3 h2{
+    padding-top: 10%;
 }
-.s2 h2:before{
-    width: 12px;
-    content: url("../img/14.png");
+.s2 h2:before,
+.s2 h2:after,
+.s3 h2:before,
+.s3 h2:after{
+    content:"";
+    width: 83px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
 }
-.s2 h2:after{
-    content: url("../img/13.png");
+.s2 h2:before,.s3 h2:before{
+background: url("../img/14.png");
+    background-size: cover;
+    left: 35px;
+    top: 45px;
+}
+.s2 h2:after,.s3 h2:after{
+    background: url("../img/13.png");
+    background-size: cover;
+    right: 35px;
+    top: 45px;
+}
+.s2 span,.s3 span{
+    font-size: 12px;
+}
+.s2 .main{
+    margin-top: 30px;
 }
 .s2 .main img{
     width: 80%;
@@ -148,14 +195,85 @@ body {
     width: 260px;
     padding: 20px;
     position: absolute;
-    top: 40px;
+    top: 125px;
     left: 35px;
     text-align: left;
 }
 .s2 .main span {
+    padding: 0px 15px ;
     color: black;
     font-weight: bold;
-    display: inline-block;
-    background: url("../img/9.png");
-    background-size: cover;
+   position: absolute;
+    bottom: 140px;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 20px;
+    background: -moz-linear-gradient(left, #00e7f7, #00fc9f); /*Mozilla*/
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#00e7f7), to(#00fc9f)); /*Old gradient for webkit*/
+    background: -webkit-linear-gradient(left, #00e7f7, #00fc9f); /*new gradient for Webkit*/
+    background: -o-linear-gradient(left, #00e7f7, #00fc9f); /*Opera11*/
+
 }
+
+/*s3的样式*/
+.s3{
+   color: #00e7f7;
+}
+.s3 .main div{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #00e7f759;
+    text-align: center;
+    line-height: 60px;
+}
+.s3 .main div:nth-of-type(1){
+    top: 35%;
+    left: 30%;
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+}
+.s3 .main div:nth-of-type(2){
+    top: 22%;
+    left: 20%;
+}
+.s3 .main div:nth-of-type(3){
+    top: 22%;
+    right: 20%;
+}
+.s3 .main div:nth-of-type(4){
+    top: 42%;
+    left: 3%;
+}
+.s3 .main div:nth-of-type(5){
+    top: 42%;
+    right: 3%;
+}
+.s3 .main div:nth-of-type(6){
+    bottom: 29%;
+    left: 20%;
+}
+.s3 .main div:nth-of-type(7){
+    bottom: 29%;
+    right: 20%;
+}
+.s3 .footer{
+    position: absolute;
+    bottom: 16%;
+}
+.s3 .footer p{
+    margin: auto;
+    width: 80%;
+    text-align: left;
+    font-size: 16px;
+    line-height: 30px;
+    border-left: 3px solid deepskyblue;
+    padding-left: 20px;
+}
+
+
+/*s4 的样式*/
