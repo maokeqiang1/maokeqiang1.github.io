@@ -49,20 +49,41 @@ body {
 
 /*-自定义样式开始-*/
 
+/*导航按钮*/
 .swiper-button-next {
+    width: 20px;
+    height: 35px;
     position: absolute;
     top: 95%;
     right: 50%;
     left: auto;
     margin-right: -13.5px;
     transform: rotateZ(-90deg);
+    background-size: cover;
+    animation: swiperbutton 1.5s infinite;
+    opacity: 1;
+}
+@keyframes swiperbutton{
+    0%{
+        margin-top: -22px;
+        opacity: 1;
+    }
+    100%{
+        margin-top: -60px;
+        opacity: 0;
+    }
+}
+
+/*背景*/
+
+.s1 ,.s2,.s3,.s4,.s5,.s6,.s7{
+    background: url("../img/bj.png");
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
 }
 
 /*s1部分*/
-.s1 ,.s2,.s3{
-    background: url("../img/bj.png");
-    height: 100%;
-}
 
 .s1 .header img {
     position: absolute;
@@ -136,12 +157,30 @@ body {
 }
 .s1 .footer img:nth-of-type(1) {
     left: 0;
+    animation: footerimg1 1s infinite alternate;
 }
 
 .s1 .footer img:nth-of-type(2) {
     position: absolute;
     bottom: 0;
     left: -50px;
+    animation: footerimg2 1s infinite alternate;
+}
+@keyframes footerimg1 {
+    0%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: 30px;
+    }
+}
+@keyframes footerimg2{
+    0%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: -50px;
+    }
 }
 .s1 .footer h3{
     margin-bottom: 20px;
@@ -155,56 +194,65 @@ body {
 .s2 {
     color: aqua;;
 }
-.s2 h2,.s3 h2{
-    padding-top: 10%;
+.s2 h2,.s3 h2,.s4 h2,.s5 h2,.s6 h2,.s7 h2{
+    padding-top: 15%;
 }
 .s2 h2:before,
 .s2 h2:after,
 .s3 h2:before,
-.s3 h2:after{
+.s3 h2:after,
+.s4 h2:before,
+.s4 h2:after,
+.s5 h2:before,
+.s5 h2:after,
+.s6 h2:before,
+.s6 h2:after,
+.s7 h2:before,
+.s7 h2:after{
     content:"";
     width: 83px;
     height: 20px;
     display: inline-block;
     position: absolute;
 }
-.s2 h2:before,.s3 h2:before{
+.s2 h2:before,.s3 h2:before,.s4 h2:before,.s5 h2:before,.s6 h2:before,.s7 h2:before{
 background: url("../img/14.png");
     background-size: cover;
-    left: 35px;
-    top: 45px;
+    left: 11%;
+    top: 11%;
 }
-.s2 h2:after,.s3 h2:after{
+.s2 h2:after,.s3 h2:after,.s4 h2:after,.s5 h2:after,.s6 h2:after,.s7 h2:after{
     background: url("../img/13.png");
     background-size: cover;
-    right: 35px;
-    top: 45px;
+    right: 11%;
+    top: 11%;
 }
-.s2 span,.s3 span{
+.s2 span,.s3 span,.s4 span,.s5 span{
     font-size: 12px;
 }
 .s2 .main{
-    margin-top: 30px;
-}
-.s2 .main img{
+    position: absolute;
+    background: url("../img/12.png");
+    background-size: 100% 100%;
     width: 80%;
+    top: 22%;
+    left: 10%;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 .s2 .main .text{
-    color: aqua;
-    font-size: 16px;
-    width: 260px;
-    padding: 20px;
-    position: absolute;
-    top: 125px;
-    left: 35px;
     text-align: left;
+    width: 90%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 31px;
 }
 .s2 .main span {
     padding: 0px 15px ;
     color: black;
     font-weight: bold;
    position: absolute;
-    bottom: 140px;
+    bottom: -3%;
     left: 50%;
     margin-left: -60px;
     font-size: 16px;
@@ -214,7 +262,6 @@ background: url("../img/14.png");
     background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#00e7f7), to(#00fc9f)); /*Old gradient for webkit*/
     background: -webkit-linear-gradient(left, #00e7f7, #00fc9f); /*new gradient for Webkit*/
     background: -o-linear-gradient(left, #00e7f7, #00fc9f); /*Opera11*/
-
 }
 
 /*s3的样式*/
@@ -232,7 +279,7 @@ background: url("../img/14.png");
 }
 .s3 .main div:nth-of-type(1){
     top: 35%;
-    left: 30%;
+    left: 33%;
     width: 140px;
     height: 140px;
     line-height: 140px;
@@ -264,16 +311,364 @@ background: url("../img/14.png");
 .s3 .footer{
     position: absolute;
     bottom: 16%;
+    padding-left: 7%;
 }
 .s3 .footer p{
+    float: left;
     margin: auto;
     width: 80%;
     text-align: left;
     font-size: 16px;
     line-height: 30px;
-    border-left: 3px solid deepskyblue;
     padding-left: 20px;
 }
-
+.s3 .footer div{
+    float: left;
+    width: 3px;
+    height: 60px;
+    background-color: aqua;
+    display: block;
+}
 
 /*s4 的样式*/
+
+.s4{
+    color: aqua;
+}
+.s4 .main{
+    position: absolute;
+    background: url("../img/s4bj.png");
+    background-size: 100% 100%;
+    width: 80%;
+    height: 58%;
+    top: 22%;
+    left: 10%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.s4 .main .btn{
+    margin: auto;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+.s4 .main .btn p{
+    font-size: 20px;
+}
+.s4 .main .btn p:nth-of-type(1){
+    position: relative;
+    top: -30px;
+    left: 0px;
+}
+.s4 .main .btn p:nth-of-type(1) img{
+    position: absolute;
+    top: -12px;
+    left: -30%;
+}
+.s4 .main .btn p:nth-of-type(2){
+    position: relative;
+    top: -90px;
+    left: 110px;
+}
+.s4 .main .btn p:nth-of-type(2) img{
+    position: relative;
+    top: 20px;
+}
+.s4 .main .one{
+    position: relative;
+    top: 25px;
+}
+.s4 .main .one p:nth-of-type(1){
+    position: absolute;
+    font-size: 20px;
+    line-height: 10px;
+}
+.s4 .main .one p:nth-of-type(1) img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 6px;
+    margin-right: 20px;
+}
+.s4 .main .one p:nth-of-type(2){
+    position: absolute;
+    top: 45px;
+}
+.s4 .main .one p:nth-of-type(3){
+    position: absolute;
+    top: 75px;
+}
+.s4 .main .two{
+    position: relative;
+    top: 145px;
+}
+.s4 .main .two p:nth-of-type(1){
+    position: absolute;
+    font-size: 20px;
+    line-height: 10px;
+}
+.s4 .main .two p:nth-of-type(1) img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 6px;
+    margin-right: 20px;
+}
+.s4 .main .two p:nth-of-type(2){
+    position: absolute;
+    top: 45px;
+}
+.s4 .main .two p:nth-of-type(3){
+    position: absolute;
+    top: 75px;
+}
+.s4 .main .three{
+    position: relative;
+    top: 245px;
+}
+.s4 .main .three p:nth-of-type(1){
+    position: absolute;
+    font-size: 20px;
+    line-height: 10px;
+}
+.s4 .main .three p:nth-of-type(1) img{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 6px;
+    margin-right: 20px;
+}
+.s4 .main .three p:nth-of-type(2){
+    position: absolute;
+    top: 45px;
+}
+.s4 .main .three p:nth-of-type(3){
+    position: absolute;
+    top: 75px;
+}
+.s4 .p1{
+    position: absolute;
+    top: 85%;
+}
+/*s5 的样式*/
+.s5{
+   color: aqua;
+}
+.s5 div{
+    width: 42%;
+    height: 33%;
+    background: url("../img/12.png");
+    background-size: 100% 100%;
+}
+.s5 div img{
+    width: 90%;
+    top: 0;
+    left: 0;
+}
+.s5 div p{
+    position: relative;
+    top: -13px;
+}
+.s5 div span{
+    padding: 0 15%;
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    bottom: 4%;
+    margin-left: -60px;
+    font-size: 18px;
+    line-height: 32px;
+    border-radius: 20px;
+    background: -moz-linear-gradient(left, #00e7f7, #00fc9f); /*Mozilla*/
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#00e7f7), to(#00fc9f)); /*Old gradient for webkit*/
+    background: -webkit-linear-gradient(left, #00e7f7, #00fc9f); /*new gradient for Webkit*/
+    background: -o-linear-gradient(left, #00e7f7, #00fc9f);
+}
+.s5 div:nth-of-type(1){
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+.s5 div:nth-of-type(2){
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+.s5 div:nth-of-type(3){
+    position: absolute;
+    top: 55%;
+    left: 5%;
+}
+.s5 div:nth-of-type(4){
+    position: absolute;
+    top: 55%;
+    right: 5%;
+}
+
+/*s6的样式*/
+
+.s6{
+    color: #00e7f7;
+}
+.s6 .main{
+    margin-top: 30px;
+}
+.s6 .maintop img{
+    width: 70%;
+    position: absolute;
+    top:24%;
+    left: 14%;
+}
+.s6 .maintop p{
+    left: 17%;
+    top: 25%;
+    position: absolute;
+    font-size: 20px;
+    color: black;
+}
+.s6 .mainbottom img{
+    width: 70%;
+    position: absolute;
+    top: 30%;
+    left: 14%;
+}
+.s6 .mainbottom p{
+    font-size: 16px;
+}
+.s6 .mainbottom span{
+    margin-right: 15px;
+}
+.s6 .mainbottom p:nth-of-type(1){
+    position: absolute;
+    top: 31%;
+    left: 17%;
+}
+.s6 .mainbottom p:nth-of-type(2){
+    position: absolute;
+    top: 34.5%;
+    left: 17%;
+}
+.s6 .mainbottom p:nth-of-type(3){
+    position: absolute;
+    top: 38%;
+    left: 17%;
+}
+.s6 .texttop img{
+    width: 70%;
+    position: absolute;
+    top:45%;
+    left: 14%;
+}
+.s6 .texttop p{
+    line-height: 37px;
+    left: 17%;
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    top: 45%;
+}
+.s6 .textbottom img{
+    width: 70%;
+    position: absolute;
+    top: 51%;
+    left: 14%;
+}
+.s6 .textbottom p{
+    font-size: 16px;
+}
+.s6 .textbottom p:nth-of-type(1){
+    position: absolute;
+    top:52%;
+    left: 17%;
+}
+.s6 .textbottom  p:nth-of-type(2){
+    position: absolute;
+    top: 55.5%;
+    left: 17%;
+}
+.s6 .textbottom  p:nth-of-type(3){
+    position: absolute;
+    top: 59%;
+    left: 17%;
+}
+.s6 .textbottom span{
+    margin-right: 15px;
+}
+.s6 .footertop img{
+    width: 70%;
+    position: absolute;
+    top:66%;
+    left: 14%;
+}
+.s6 .footertop p{
+    line-height: 37px;
+    left: 17%;
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    top: 66%;
+}
+.s6 .footerbottom img{
+    width: 70%;
+    position: absolute;
+    top: 72%;
+    left: 14%;
+}
+.s6 .footerbottom p{
+    font-size: 16px;
+}
+.s6 .footerbottom p:nth-of-type(1){
+    position: absolute;
+    top:73%;
+    left: 17%;
+}
+.s6 .footerbottom  p:nth-of-type(2){
+    position: absolute;
+    top: 76.5%;
+    left: 17%;
+}
+.s6 .footerbottom  p:nth-of-type(3){
+    position: absolute;
+    top: 80%;
+    left: 17%;
+}
+.s6 .footerbottom span{
+    margin-right: 15px;
+}
+
+/*s7的样式*/
+
+.s7{
+    color: aqua;
+}
+.s7 .main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    top: 25%;
+    left:7%;
+    background: url("../img/12.png");
+    background-size: 100% 100%;
+    width: 85%;
+}
+.s7 .main .text input{
+    border:none;
+    font-size: 20px;
+    padding: 10px 22px;
+    width: 80%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.s7 .main button{
+    font-size: 20px;
+    border: none;
+    background-color: aqua;
+    color: #ffffff;
+    width: 92%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.s7 .main p{
+    font-size: 20px;
+}
