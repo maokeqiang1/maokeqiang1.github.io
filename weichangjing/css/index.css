@@ -74,6 +74,40 @@ body {
     }
 }
 
+/*水流*/
+.water{
+    position: absolute;
+    bottom: -2px;
+    z-index: 100;
+}
+.water img {
+    width: 130%;
+}
+.water img:nth-of-type(1) {
+    animation: footerimg1 1s infinite alternate;
+}
+
+.water img:nth-of-type(2) {
+    position: absolute;
+    bottom: 0px;
+    animation: footerimg2 1s infinite alternate;
+}
+@keyframes footerimg1 {
+    0%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: 30px;
+    }
+}
+@keyframes footerimg2{
+    0%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: -50px;
+    }
+}
 /*背景*/
 
 .s1 ,.s2,.s3,.s4,.s5,.s6,.s7{
@@ -149,45 +183,16 @@ body {
 .s1 .footer {
     color: aqua;
     position: absolute;
-    bottom: 0;
+    bottom: 13%;
+    left: 20%;
 }
 
-.s1 .footer img {
-    width: 130%;
-}
-.s1 .footer img:nth-of-type(1) {
-    left: 0;
-    animation: footerimg1 1s infinite alternate;
-}
-
-.s1 .footer img:nth-of-type(2) {
-    position: absolute;
-    bottom: 0;
-    left: -50px;
-    animation: footerimg2 1s infinite alternate;
-}
-@keyframes footerimg1 {
-    0%{
-        margin-left: 0px;
-    }
-    100%{
-        margin-left: 30px;
-    }
-}
-@keyframes footerimg2{
-    0%{
-        margin-left: 0px;
-    }
-    100%{
-        margin-left: -50px;
-    }
-}
 .s1 .footer h3{
     margin-bottom: 20px;
 }
-.s1 .footer p{
-    margin-bottom: 40px;
-}
+/*.s1 .footer p{*/
+    /*margin-bottom: 40px;*/
+/*}*/
 
 
 /*s2部分*/
@@ -273,9 +278,17 @@ background: url("../img/14.png");
     height: 60px;
     border-radius: 50%;
     position: absolute;
-    background-color: #00e7f759;
     text-align: center;
     line-height: 60px;
+}
+.s3 .main div img{
+    width: 100%;
+    height: 100%;
+}
+.s3 .main div p{
+    position: absolute;
+    top: 0px;
+    left: 20%;
 }
 .s3 .main div:nth-of-type(1){
     top: 35%;
@@ -283,6 +296,15 @@ background: url("../img/14.png");
     width: 140px;
     height: 140px;
     line-height: 140px;
+}
+.s3 .main div:nth-of-type(1) img{
+    width: 100%;
+    height: 100%;
+}
+.s3 .main div:nth-of-type(1) p{
+    position: absolute;
+    top: 0px;
+    left: 24%;
 }
 .s3 .main div:nth-of-type(2){
     top: 22%;
@@ -329,7 +351,12 @@ background: url("../img/14.png");
     background-color: aqua;
     display: block;
 }
-
+.s3 .main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
 /*s4 的样式*/
 
 .s4{
@@ -450,6 +477,17 @@ background: url("../img/14.png");
     position: absolute;
     top: 85%;
 }
+.s4 .img1{
+    animation: s4img infinite 2s;
+}
+@keyframes s4img {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 17px;
+    }
+}
 /*s5 的样式*/
 .s5{
    color: aqua;
@@ -462,12 +500,14 @@ background: url("../img/14.png");
 }
 .s5 div img{
     width: 90%;
-    top: 0;
-    left: 0;
+    position: absolute;
+    top:0;
+    left: 8px;
 }
 .s5 div p{
-    position: relative;
-    top: -13px;
+    position: absolute;
+    bottom: 45px;
+    left: 40px;
 }
 .s5 div span{
     padding: 0 15%;
@@ -505,6 +545,15 @@ background: url("../img/14.png");
     right: 5%;
 }
 
+/*s5动画*/
+/*@keyframes s5img {*/
+    /*0%{*/
+        /*width: 90%;*/
+    /*}*/
+    /*100%{*/
+        /*width: 92%;*/
+    /*}*/
+/*}*/
 /*s6的样式*/
 
 .s6{

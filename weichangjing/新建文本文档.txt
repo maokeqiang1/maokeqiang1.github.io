@@ -1,13 +1,1 @@
- <div class="text">
-                        <p class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s"
-                           swiper-animate-delay="0.2s">亲爱的同志们，大家晚上好</p>
-                        <p class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.8s"
-                           swiper-animate-delay="0.8s">我们成立于2009年，现有成员1300多人,我们专注于互联网与信息互动领，
-                            坚持“技术领先，理念领先，管理领先”的发展战略，2015完成公司整体改制，
-                            变更为股份有限公司，倾力打造具有自主知识产权的高端移动分发平台，
-                            致力于帮助移动互联网用户过移动设备享受跟开放，便捷的互联网服务。
-                        </p>
-                        <p class="ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s"
-                           swiper-animate-delay="1.2s">我们秉着"真诚""责任""主动""团结的企业文化，立志深圳移动互联网，打造研发和
-                            运营一体的产业链，成为移动互联网行业值得用户尊敬和信赖的公司。"</p>
-                    </div>
+browser-sync start --server --files "css/*.css, js/*.js, *.html"
