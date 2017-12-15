@@ -506,7 +506,7 @@ background: url("../img/14.png");
 }
 .s5 div p{
     position: absolute;
-    bottom: 45px;
+    bottom: 55px;
     left: 40px;
 }
 .s5 div span{
@@ -694,7 +694,7 @@ background: url("../img/14.png");
     padding-top: 30px;
     padding-bottom: 30px;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left:7%;
     background: url("../img/12.png");
     background-size: 100% 100%;
