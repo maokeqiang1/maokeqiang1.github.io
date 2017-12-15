@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+.s1,.s2,.s3,.s4,.s5{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+/*导航按钮*/
+.swiper-button-next{
+    width: 20px;
+    height: 35px;
+    position: absolute;
+    top: 95%;
+    right: 50%;
+    left: auto;
+    margin-right: -13.5px;
+    transform: rotateZ(-90deg);
+    background-size: cover;
+    animation: swiperbutton 1.5s infinite;
+    opacity: 1;
+}
+@keyframes swiperbutton{
+    0%{
+        margin-top: -22px;
+        opacity: 1;
+    }
+    100%{
+        margin-top: -60px;
+        opacity: 0;
+    }
+}
+
+/*进度条*/
+.swiper-container-vertical > .swiper-pagination-progressbar{
+    width: 4px;
+    height: 67%;
+    transform: rotateZ(-90deg);
+    position: absolute;
+    top: 66%;
+    left: 49%;
+    z-index: 100;
+}
+/*自定义音乐*/
+
+.mp3img{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.18);
+    border: 3px solid rgba(0, 0, 0, 0.16);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3.5;
+    animation: mp3 2s infinite linear;
+}
+@keyframes mp3{
+    0%{transform:rotateZ(0deg)}
+    100%{transform:rotateZ(360deg)}
+}
+/*样式开始*/
+
+
+/*s1的样式*/
+.s1 img:nth-of-type(1){
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+}
+.s1 img:nth-of-type(2){
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 29%;
+    left: 28%;
+}
+.s1 img:nth-of-type(3){
+    width: 100%;
+    position: absolute;
+    top: 90%;
+    left: 0;
+}
+.s1 img:nth-of-type(4){
+    width: 100%;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    transform: rotateZ(11deg);
+}
+.s1{
+    color: #eeae40;
+}
+.s1 .top{
+    position: absolute;
+    top: 10%;
+    left: 16%;
+}
+.s1 .top p:nth-of-type(1){
+        font-size: 60px;
+}
+.s1 .top p:nth-of-type(2){
+    font-size: 25px;
+}
+.s1 .top p:nth-of-type(3){
+    font-size: 20px;
+}
+.s1 .text {
+    position: absolute;
+    top: 82%;
+    left: 16%;
+}
