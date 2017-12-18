@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container-inner{
+    background:black;
+}
+.header-inner{
+    background: url("../img/main-bg.jpg");
+    background-size: 100% 100%;
+}
+.main-inner{
+    background: url("../img/image01.png");
+    background-size: 100% 100%;
+}
+.header .touxiang{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+.header .touxiang img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.nav-tabs{
+    border: none;
+}

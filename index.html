@@ -1,16 +1,46 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html >
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>在线预览</title>
+    <title>HTML5 WebGL粒子爆炸动画DEMO演示</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+
 </head>
+
 <body>
 
-<div>
-    <a href="weichangjing" style="font-size: 25px;color: crimson">在线预览微场景</a>
+<canvas id="c"></canvas>
+
+<div class="text">
+    <p>
+        <a href="gerenzhuye">点击进入毛可强的Git个人主页</a>
+    </p>
 </div>
+
+<script id="shader-fs" type="x-shader/x-fragment">
+				#ifdef GL_ES
+				  precision highp float;
+				  #endif
+    		void main(void) {
+    		 gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
+    		}
+		</script>
+
+<script id="shader-vs" type="x-shader/x-vertex">
+    	attribute vec3 vertexPosition;
+
+  	uniform mat4 modelViewMatrix;
+  	uniform mat4 perspectiveMatrix;
+
+   	void main(void) {
+  		gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
+  	}
+  </script>
+
+<script src="js/index.js"></script>
+
 </body>
 </html>
